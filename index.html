@@ -62,24 +62,7 @@
     gtag('config', 'G-GYS3Q59XDR');
   </script>
 
-  <script>
-    window.addEventListener("load", function () {
-      const form = document.getElementById('my-form');
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const data = new FormData(form);
-        const action = e.target.action;
-        fetch(action, {
-          method: 'POST',
-          body: data,
-        })
-          .then(() => {
-            alert("Thank you for contacting us!\nOur team will shortly get in touch with you.");
-            location.reload();
-          })
-      });
-    });
-  </script>
+  
 
   <style>
     @media only screen and (max-width: 760px){
@@ -657,25 +640,38 @@
 
 
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener("load", function () {
     const form = document.getElementById('my-form');
     const phoneInput = form.querySelector('input[name="phone"]');
 
-    form.addEventListener('submit', function (e) {
-      const phoneValue = phoneInput.value.trim();
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-      // Allow formats like: 1234567890, +1234567890
+      // --- Phone Validation ---
+      const phoneValue = phoneInput.value.trim();
       const phoneRegex = /^\+?\d{10,15}$/;
 
       if (!phoneRegex.test(phoneValue)) {
-        e.preventDefault(); // Stop form from submitting
-        alert("Please enter a valid phone number with at least 10 digits and numbers only.");
+        alert("Please enter a valid phone number with 10 to 15 digits. No letters or special characters.");
         phoneInput.focus();
-        return false;
+        return; // 🚫 Stop fetch from running
       }
+
+      // --- Proceed to Submit ---
+      const data = new FormData(form);
+      const action = e.target.action;
+
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+        .then(() => {
+          alert("Thank you for contacting us!\nOur team will shortly get in touch with you.");
+          location.reload();
+        });
     });
   });
-  </script>
+</script>
 
 
 </body>
