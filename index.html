@@ -31,6 +31,27 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "so5chj6bee");
+    </script>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="ada9eb40-fd47-4529-b6f9-96478f679535"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17371943672"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17371943672');
+    </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYS3Q59XDR"></script>
   <script>
@@ -349,9 +370,9 @@
                   <div class="quote-icon">&rdquo;</div>
                 </div>
                 <p class="testimonial-text">
-                  Highly recommend!! Zero complaints…Great customer service and communication via phone, text and email from answering questions to ordering and payment. Timely delivery and pick up and no damage to the driveway or debris left behind. Super easy and convenient to use. Excellent for spring cleaning projects!
+                   Great experience! Customer service was great and received the dumpster a few hours later after contacting them. The person I spoke with over the phone was very professional and knowledgeable. Will definitely use them again!
                 </p>
-                <div class="testimonial-name">Amanda Irwin</div>
+                <div class="testimonial-name">Ana Faulk</div>
                 <div class="star-rating">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -368,9 +389,9 @@
                   <div class="quote-icon">&rdquo;</div>
                 </div>
                 <p class="testimonial-text">
-                 The lady I spoke to when renting dumpster was very helpful n friendly. Dumpster was delivered on time n day I asked for. The guy who came to pick it up was very friendly n the dumpster was picked up at time n day specified. They are a great company n I would definitely recommend them
+                 Very easy to deal with. Answered their phones and I was able to speak to someone right away. If we need a dumpster again I will for sure use them
                 </p>
-                <div class="testimonial-name">Frances Bailie</div>
+                <div class="testimonial-name">Amy Garber</div>
                 <div class="star-rating">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -386,9 +407,9 @@
                   <div class="quote-icon">&rdquo;</div>
                 </div>
                 <p class="testimonial-text">
-                  Outstanding service and communication. I would definitely recommend to anyone in need of a dumpster.
+                  We were thrilled with how fast we were able to book and receive our dumpster for a project that came up quickly. Service was super friendly and helpful plus instal and pick-up was a breeze. We will use Bin there Dump that again- happy they’ve arrived in town
                 </p>
-                <div class="testimonial-name">James Plumlee</div>
+                <div class="testimonial-name">Anna Sheridan</div>
                 <div class="star-rating">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -633,6 +654,29 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('my-form');
+    const phoneInput = form.querySelector('input[name="phone"]');
+
+    form.addEventListener('submit', function (e) {
+      const phoneValue = phoneInput.value.trim();
+
+      // Allow formats like: 1234567890, +1234567890
+      const phoneRegex = /^\+?\d{10,15}$/;
+
+      if (!phoneRegex.test(phoneValue)) {
+        e.preventDefault(); // Stop form from submitting
+        alert("Please enter a valid phone number with at least 10 digits and numbers only.");
+        phoneInput.focus();
+        return false;
+      }
+    });
+  });
+  </script>
+
 
 </body>
 
